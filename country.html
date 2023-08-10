@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <title></title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="app2.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h2 class="title"><a href="./">Where in the World?</a></h2>
+            <label class="switch">
+                <input type="checkbox" class="ui-theme">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+    <main>
+        <div class="dot-spinner">
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+            <div class="dot-spinner__dot"></div>
+        </div>
+        <div class="back-btn">
+            <span onclick="history.back()"><i class="fa-solid fa-arrow-left"></i> Back</span>
+        </div>
+        <div class="country-container">
+            <div class="flag-img-container">
+                <img class="flag-img" src="" alt="flag">
+            </div>
+            <div class="country-details">
+                <h1>Iceland</h1>
+                <div class="country-info">
+                    <div>
+                        <p><b>Native name: </b><span class="native-name"></span></p>
+                        <p><b>Population: </b><span class="population"></span></p>
+                        <p><b>Region: </b><span class="region"></span></p>
+                        <p><b>Sub Region: </b><span class="sub-region"></span></p>
+                        <p><b>Capital: </b><span class="capital"></span></p>
+                    </div>
+                    <div>
+                        <p><b>Top Level Domain: </b><span class="top-level-domain"></span></p>
+                        <p><b>Currencies: </b><span class="currency"></p>
+                        <p><b>Languages: </b><span class="languages"></p>
+                    </div>
+                </div>
+                <div class="redirect-container">
+                    <p class="border-country"><b>Border Countries: </b></p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
