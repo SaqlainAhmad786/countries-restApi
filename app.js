@@ -2,6 +2,7 @@ const countriesContainer = document.querySelector(".countries-container");
 const filterRegion = document.querySelector(".sort-bar");
 const searchInput = document.querySelector(".search-bar input");
 const themeChanger = document.querySelector(".ui-theme");
+const themeMessage = document.querySelector('.message')
 let allCountriesData;
 
 let theme = window.localStorage.getItem("data-theme");
@@ -11,9 +12,20 @@ themeChanger.addEventListener("change", function () {
   if (this.checked) {
     document.body.classList.add("dark");
     window.localStorage.setItem("data-theme", "dark");
+    themeMessage.style.opacity = '1'
+    themeMessage.innerText = 'Dark mode Enabled'
+    setTimeout(()=>{
+      themeMessage.style.opacity = '0'
+    },3000)
+
   } else {
     document.body.classList.remove("dark");
     window.localStorage.removeItem("data-theme");
+    themeMessage.style.opacity = '1'
+    themeMessage.innerText = 'Dark mode Disabled'
+    setTimeout(()=>{
+      themeMessage.style.opacity = '0'
+    },3000)
   }
 });
 

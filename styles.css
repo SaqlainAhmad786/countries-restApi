@@ -205,6 +205,22 @@ input:checked + .slider:before {
   }
 }
 
+.message{
+  background-color: rgb(0, 0, 0, 0.7);
+  border: 0.5px solid white;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  left: 50%;
+  bottom: 5rem;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 100;
+  pointer-events: none;
+  color: white;
+  transition: opacity 250ms ease-in-out;
+}
+
 /***********************************************************************************************/
 
 main{
@@ -258,7 +274,7 @@ main{
 
 .countries-container{
     margin-inline: auto;
-    margin-top: 16px;
+    margin-top: 22px;
     display: flex;
     gap: 32px;
     flex-wrap: wrap;
@@ -309,6 +325,17 @@ main{
     .country-card img{
         width: 50%;
     }
+
+    .card-text{
+      padding-inline: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card-text h3{
+      margin-block: 8px;
+    }
 }
 
 @media (width<550px){
@@ -334,11 +361,16 @@ main{
     .country-card{
         flex-direction: column;
         width: 250px;
-        padding-bottom: 18px;
+        /* padding-bottom: 18px; */
     }
     
     .country-card img{
         width: 100%;
+    }
+
+    .card-text{
+      padding: 12px 22px;
+      display: flex;
     }
 }
 
