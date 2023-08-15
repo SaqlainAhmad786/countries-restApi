@@ -31,21 +31,8 @@ header{
     box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-.header-content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 90%;
-    margin-inline: auto;
-}
-
-.title{
-    font-weight: 800;
-}
-
 .message{
   background-color: rgb(0, 0, 0, 0.7);
-  border: 0.5px solid white;
   border-radius: 4px;
   padding: 0.5rem 1rem;
   position: fixed;
@@ -57,6 +44,29 @@ header{
   pointer-events: none;
   color: white;
   transition: opacity 250ms ease-in-out;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 90%;
+    margin-inline: auto;
+}
+
+.title-section{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title{
+    font-weight: 800;
+}
+
+.earth-icon{
+  max-width: 36px;
+  height: 36px;
 }
 
 /***********************************************************************************************/
@@ -287,38 +297,45 @@ main{
 }
 
 @media (width<768px){
-    .country-container{
-        flex-direction: column;
-    }
 
-    .country-details{
-        padding: 0;
-    }
+  .country-container{
+    flex-direction: column;
+  }
 
-    .country-container img{
-        background: #000;
-        display: block;
+  .country-details{
+    padding: 0;
+  }
 
-    }
-    .flag-img-container img{
-        object-fit: contain;
-        width: 50%;
-        margin-inline: auto;
-    }
+  .country-container img{
+    background: #000;
+    display: block;
+
+  }
+  .flag-img-container img{
+    object-fit: contain;
+    width: 50%;
+    margin-inline: auto;
+  }
+    
 }
 
 @media (width<550px){
 
-    .title{
-        font-size: 1.25em;
-    }
+  .earth-icon{
+    max-width: 28px;
+    height: 28px;
+  }
 
-    .country-details h1{
-        text-align: center;
-    }
+  .title{
+    font-size: 1.2em;
+  }
 
-    .country-info{
-      flex-direction: column;
-      gap: 0;
-    }
+  .country-details h1{
+    text-align: center;
+  }
+
+  .country-info{
+    flex-direction: column;
+    gap: 0;
+  }
 }
